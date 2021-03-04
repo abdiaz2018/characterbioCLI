@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/environment.rb'
+
+# CLI.new
+# SuperHeroBio.new
+# DataRetriever.new
+
+# DataRetriever.get_bios('https://github.com/akabab/superhero-api/tree/master/api/biography')
+# DataRetriever.get_names
+# binding.pry 
+# puts 
+cli = CLI.new
+cli.begin
+# DataRetriever.get_names
+# SuperHeroBio.list_characters

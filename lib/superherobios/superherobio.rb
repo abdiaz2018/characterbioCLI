@@ -1,6 +1,7 @@
 class SuperHeroBio
 
-    attr_accessor :name, :id, :full_name, :aliases, :alter_egos, :birthplace, :alignment
+    attr_reader :name, :id
+    attr_accessor :full_name, :alter_egos, :birthplace, :alignment
 
 @@super_array = []
     def initialize(id, name)

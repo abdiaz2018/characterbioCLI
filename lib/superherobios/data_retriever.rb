@@ -7,17 +7,14 @@ class DataRetriever
             name = super_row.css("td")[2].text
             SuperHeroBio.new(id, name)
         end
-        # binding.pry
     end
 
     def self.get_bios(obj)
         num = obj.id 
         bio = HTTParty.get("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/biography/#{num}.json")
-        #update object data
-        SuperHeroBio.full_name = bio['fullName']
-        SuperHeroBio.alter_egos = bio['alterEgos']
-        SuperHeroBio.aliases = bio['aliases']
-        binding.pry
-        
+        obj.full_name = bio['fullName']
+        obj.alter_egos = bio['alterEgos']
+        obj.birthplace = bio['placeOfBirth']
+        obj.alignment = bio['alignment']
     end
 end
